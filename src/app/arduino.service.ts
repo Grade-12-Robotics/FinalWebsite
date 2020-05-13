@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ArduinoService {
 
-  pinMap = {}
+  pinMap = {};
 
   constructor(private http: HttpClient) {
-    let pins = [4];
+    const pins = [4];
 
     pins.forEach(pin => {
       this.pinMap[pin] = false;
@@ -29,5 +29,9 @@ export class ArduinoService {
       this.pinMap[pin] = true;
       this.http.get("http://70.24.95.14:4342/4/on").subscribe(() => {});
     }
+  }
+
+  getState(pin): boolean {
+    return this.pinMap[pin];
   }
 }

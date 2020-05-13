@@ -1,3 +1,4 @@
 <p>esp8266 works!</p>
 
 <button (click)="arduinoService.pinToggle(4)">Toggle pin 4</button>
+<p>Pin 4: {{arduinoService.getState(4)}}</p>
