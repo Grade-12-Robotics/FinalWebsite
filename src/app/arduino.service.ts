@@ -8,29 +8,38 @@ export class ArduinoService {
 
   pinMap = {};
 
-  constructor(private http: HttpClient) {
-    const pins = [4];
+  pins = [4, 5];
 
-    pins.forEach(pin => {
+  constructor(private http: HttpClient) {
+
+    this.pins.forEach(pin => {
       this.pinMap[pin] = false;
     });
   }
 
   pinOn(pin): void {
-    this.http.get("http://70.24.95.14:4342/4/on").subscribe(() => {});
+    this.http.get("http://70.24.95.14:4342/"+pin+"/on").subscribe(() => {});
+  }
+
+  pinOff(pin): void {
+    this.http.get("http://70.24.95.14:4342/"+pin+"/off").subscribe(() => {});
   }
 
   pinToggle(pin): void {
     if (this.pinMap[pin]) {
       this.pinMap[pin] = false;
-      this.http.get("http://70.24.95.14:4342/4/off").subscribe(() => {});
+      this.pinOff(pin);
     } else {
       this.pinMap[pin] = true;
-      this.http.get("http://70.24.95.14:4342/4/on").subscribe(() => {});
+      this.pinOn(pin);
     }
   }
 
   getState(pin): boolean {
     return this.pinMap[pin];
+  }
+
+  getPins(): any {
+    return this.pins;
   }
 }
