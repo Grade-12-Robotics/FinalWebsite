@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArduinoService } from '../arduino.service';
 
 @Component({
   selector: 'app-esp8266',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Esp8266Component implements OnInit {
 
-  constructor() { }
+  constructor(public arduinoService: ArduinoService) {}
 
   ngOnInit() {
   }
