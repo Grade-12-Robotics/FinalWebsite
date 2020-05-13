@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Grade12MasterSite"
+    }
+  },
+  "defaultProject": "Grade12MasterSite",
+  "cli": {
+    "analytics": "0a48bfa4-b450-4406-9ed7-271523ddb93e"
+  }
 }
