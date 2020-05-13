@@ -17,7 +17,6 @@ export class ArduinoService {
   }
 
   pinOn(pin): void {
-    console.log("bruh")
     this.http.get("http://70.24.95.14:4342/4/on").subscribe(() => {});
   }
 
