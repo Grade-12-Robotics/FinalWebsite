@@ -18,11 +18,11 @@ export class ArduinoService {
   }
 
   pinOn(pin): void {
-    this.http.get("http://70.24.95.14:4342/"+pin+"/on").subscribe(() => {});
+    this.http.get("http://esp8266project.ddns.net:4342/"+pin+"/on").subscribe(() => {});
   }
 
   pinOff(pin): void {
-    this.http.get("http://70.24.95.14:4342/"+pin+"/off").subscribe(() => {});
+    this.http.get("http://esp8266project.ddns.net:4342/"+pin+"/off").subscribe(() => {});
   }
 
   pinToggle(pin): void {
