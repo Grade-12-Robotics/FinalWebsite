@@ -8,7 +8,7 @@ export class ArduinoService {
 
   pinMap = {};
 
-  pins = [4, 5];
+  pins = [4, 5, 16];
 
   constructor(private http: HttpClient) {
 
