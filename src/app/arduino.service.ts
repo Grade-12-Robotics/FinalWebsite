@@ -18,19 +18,19 @@ export class ArduinoService {
   }
 
   pinOn(pin): void {
+    this.pinMap[pin] = true;
     this.http.get("http://esp8266project.ddns.net:4342/"+pin+"/on").subscribe(() => {});
   }
 
   pinOff(pin): void {
+    this.pinMap[pin] = false;
     this.http.get("http://esp8266project.ddns.net:4342/"+pin+"/off").subscribe(() => {});
   }
 
   pinToggle(pin): void {
     if (this.pinMap[pin]) {
-      this.pinMap[pin] = false;
       this.pinOff(pin);
     } else {
-      this.pinMap[pin] = true;
       this.pinOn(pin);
     }
   }
