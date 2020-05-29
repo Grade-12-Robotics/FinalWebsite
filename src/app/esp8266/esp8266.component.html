@@ -16,7 +16,7 @@
           <h5 class="card-title">Light Three:</h5>
           <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LAMP</a>
           <hr/>
-          <a class="btn text-white btn-lg btn-block" (click)="arduinoService.pinToggle(0)" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0) && arduinoService.getState(5), 'btn-dark': !arduinoService.getState(0) && !arduinoService.getState(5), 'btn-warning': (!arduinoService.getState(0) || !arduinoService.getState(0))}">All LIGHTS</a>
+          <a class="btn text-white btn-lg btn-block">All LIGHTS</a>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
           <h5 class="card-title">Light Three:</h5>
           <a class="btn text-white" (click)="arduinoService.pinToggle(6)" [ngClass] ="{'btn-success': arduinoService.getState(6), 'btn-dark': !arduinoService.getState(6)}">LAMP</a>
           <hr/>
-          <a class="btn text-white btn-lg btn-block" (click)="arduinoService.pinToggle(4)" (click)="arduinoService.pinToggle(5)" [ngClass] ="{'btn-success': arduinoService.getState(4) && arduinoService.getState(5), 'btn-dark': !arduinoService.getState(4) && !arduinoService.getState(5), 'btn-warning': (!arduinoService.getState(4) || !arduinoService.getState(5))}">All LIGHTS</a>
+          <a class="btn text-white btn-lg btn-block" (click)="arduinoService.toggleAll()" [ngClass] ="{'btn-success': arduinoService.getState(4) && arduinoService.getState(5), 'btn-dark': !arduinoService.getState(4) && !arduinoService.getState(5), 'btn-warning': (!arduinoService.getState(4) || !arduinoService.getState(5))}">All LIGHTS</a>
         </div>
       </div>
     </div>

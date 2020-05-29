@@ -42,4 +42,22 @@ export class ArduinoService {
   getPins(): any {
     return this.pins;
   }
+
+  toggleAll(): void {
+    let pinCount = 0
+    
+    this.pins.forEach(pin => {
+      pinCount = pinCount + this.pinMap[pin]
+    })
+
+    if (pinCount === 0) {
+      this.pins.forEach(pin => {
+        this.pinMap[pin] = true
+      })
+    } else {
+      this.pins.forEach(pin => {
+        this.pinMap[pin] = false
+      })
+    }
+  }
 }
