@@ -8,15 +8,7 @@
           <h2 class="card-title">Mr. Haas</h2>
           <p class="card-text">Control the lights at Mr. Haas’s House.</p>
           <h5 class="card-title">Light One:</h5>
-          <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LED 1</a>
-          <hr/>
-          <h5 class="card-title">Light Two:</h5>
-          <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LED 2</a>
-          <hr/>
-          <h5 class="card-title">Light Three:</h5>
-          <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LAMP</a>
-          <hr/>
-          <a class="btn text-white btn-lg btn-block">All LIGHTS</a>
+          <a class="btn text-white btn-success" (click)="arduinoHaas.lampToggle()">LED 1</a>
         </div>
       </div>
     </div>
