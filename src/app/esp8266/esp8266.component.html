@@ -1,7 +1,41 @@
-<p>esp8266 works!</p>
-
-<button (click)="arduinoService.pinToggle(4)">Toggle pin 4</button>
-<p>Pin 4: {{arduinoService.getState(4)}}</p>
-
-<button (click)="arduinoService.pinToggle(5)">Toggle pin 5</button>
-<p>Pin 5: {{arduinoService.getState(5)}}</p>
+<div class="Title">
+    <h1 class="text-center p-3">ESP8266 Portal</h1>
+</div>
+<div class="row">
+    <div class="col-sm-6" className="Mr. Haas">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Mr. Haas</h2>
+          <p class="card-text">Control the lights at Mr. Haas’s House.</p>
+          <h5 class="card-title">Light One:</h5>
+          <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LED 1</a>
+          <hr/>
+          <h5 class="card-title">Light Two:</h5>
+          <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LED 2</a>
+          <hr/>
+          <h5 class="card-title">Light Three:</h5>
+          <a class="btn text-white" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0), 'btn-dark': !arduinoService.getState(0)}">LAMP</a>
+          <hr/>
+          <a class="btn text-white btn-lg btn-block" (click)="arduinoService.pinToggle(0)" (click)="arduinoService.pinToggle(0)" [ngClass] ="{'btn-success': arduinoService.getState(0) && arduinoService.getState(5), 'btn-dark': !arduinoService.getState(0) && !arduinoService.getState(5), 'btn-warning': (!arduinoService.getState(0) || !arduinoService.getState(0))}">All LIGHTS</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6" className="Mathew_Borg">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Mathew Borg</h2>
+          <p class="card-text">Control the lights at Mathew Borg's House.</p>
+          <h5 class="card-title">Light One:</h5>
+          <a class="btn text-white" (click)="arduinoService.pinToggle(4)" [ngClass] ="{'btn-success': arduinoService.getState(4), 'btn-dark': !arduinoService.getState(4)}">LED 1</a>
+          <hr/>
+          <h5 class="card-title">Light Two:</h5>
+          <a class="btn text-white" (click)="arduinoService.pinToggle(5)" [ngClass] ="{'btn-success': arduinoService.getState(5), 'btn-dark': !arduinoService.getState(5)}">LED 2</a>
+          <hr/>
+          <h5 class="card-title">Light Three:</h5>
+          <a class="btn text-white" (click)="arduinoService.pinToggle(6)" [ngClass] ="{'btn-success': arduinoService.getState(6), 'btn-dark': !arduinoService.getState(6)}">LAMP</a>
+          <hr/>
+          <a class="btn text-white btn-lg btn-block" (click)="arduinoService.pinToggle(4)" (click)="arduinoService.pinToggle(5)" [ngClass] ="{'btn-success': arduinoService.getState(4) && arduinoService.getState(5), 'btn-dark': !arduinoService.getState(4) && !arduinoService.getState(5), 'btn-warning': (!arduinoService.getState(4) || !arduinoService.getState(5))}">All LIGHTS</a>
+        </div>
+      </div>
+    </div>
+  </div>
