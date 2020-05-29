@@ -23,4 +23,8 @@ export class ArduinoHaasService {
     console.log(this.lampEnabled)
   }
 
+  getState(): boolean {
+    return this.lampEnabled
+  }
+
 }
