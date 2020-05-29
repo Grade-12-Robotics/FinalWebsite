@@ -33,8 +33,6 @@
           <hr/>
           <h5 class="card-title">Light Three:</h5>
           <a class="btn text-white" (click)="arduinoService.pinToggle(16)" [ngClass] ="{'btn-success': arduinoService.getState(16), 'btn-dark': !arduinoService.getState(16)}">LAMP</a>
-          <hr/>
-          <a class="btn text-white btn-lg btn-block" (click)="arduinoService.toggleAll()" [ngClass] ="{'btn-success': arduinoService.getState(4) && arduinoService.getState(5), 'btn-dark': !arduinoService.getState(4) && !arduinoService.getState(5), 'btn-warning': (!arduinoService.getState(4) || !arduinoService.getState(5) || !arduinoService.getState(16))}">All LIGHTS</a>
         </div>
       </div>
     </div>
