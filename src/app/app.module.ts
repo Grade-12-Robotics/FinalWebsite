@@ -11,11 +11,13 @@ import { Esp8266Component } from './esp8266/esp8266.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ArduinoService } from './arduino.service';
+import { AboutespComponent } from './aboutesp/aboutesp.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'esp8266', component: Esp8266Component },
+  { path: 'aboutesp', component: AboutespComponent},
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    Esp8266Component
+    Esp8266Component,
+    AboutespComponent
   ],
   imports: [
     BrowserModule,
